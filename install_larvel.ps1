@@ -4,10 +4,9 @@ cd $HOME
 cd .\Downloads\
 wget -UseBasicParsing https://windows.php.net/downloads/releases/php-7.3.3-nts-Win32-VC15-x64.zip -OutFile PHP.zip
 wget -UseBasicParsing https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe -OutFile VS2015.exe
-.\VS2015.exe /s
-cd c:\
 mkdir $phpPath
 Expand-Archive PHP.zip -DestinationPath $phpPath
+.\VS2015.exe /s
 cd $phpPath
 del C:\PHP\php.ini
 wget -UseBasicParsing https://hastebin.com/raw/ukejavikad -OutFile .\"php.ini"
