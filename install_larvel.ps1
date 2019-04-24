@@ -25,8 +25,8 @@ $compBS | Set-Content .\composer.bat -Encoding Ascii
 $oldPath=(Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
 $newPath=$oldPath+’;C:\Program Files\composer’
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH –Value $newPath
-php composer.phar global require laravel/installer
+php composer.phar global require cretueusebiu/valet-windows
 $oldPath=(Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).Path
 $newPath=$oldPath+’;$HOME\AppData\Roaming\Composer\vendor\bin’
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH –Value $newPath
-
+valet install
